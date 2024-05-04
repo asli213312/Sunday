@@ -2,7 +2,7 @@ package com.example.sunday.network
 
 import com.example.sunday.models.HourlyForecast
 import com.example.sunday.models.Location
-import com.example.sunday.models.forecasts.Daily
+import com.example.sunday.models.forecasts.DailyForecasts
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -22,7 +22,7 @@ interface Api {
         @Path("location_key") locationKey:String,
         @Query("apikey") apikey:String = API_KEY,
         @Query("metric") metric:Boolean = true,
-    ): Response<Daily>
+    ): Response<DailyForecasts>
 
     @GET("forecasts/v1/hourly/12hour/{location_key}")
     suspend fun getHourlyForecasts(

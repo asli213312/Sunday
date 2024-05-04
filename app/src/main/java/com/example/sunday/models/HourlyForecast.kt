@@ -9,5 +9,5 @@ data class HourlyForecast(
     @SerializedName("IconPhrase") val iconPhrase:String,
     @SerializedName("HasPrecipitation") val hasPrecipitation:Boolean,
     @SerializedName("IsDaylight") val isDaylight:Boolean,
-    @SerializedName("Temperature") val temperature: Temperature
+    @SerializedName("Temperature") val temperature: Value
 )
